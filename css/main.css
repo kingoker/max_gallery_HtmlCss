@@ -1,0 +1,74 @@
+/* Normolize */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+ul, li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+
+
+
+/* Common Style */
+.button{
+    padding: 10px 30px;
+    border: none;
+    stroke: none;
+    cursor: pointer;
+}
+.container{
+    margin: 0px 100px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* Main Styles */
+
+/* Header */
+.header{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: silver;
+}
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__list{
+    display: flex;
+    gap: 30px;
+}
+
+/* Gallery */
+.lightgallery{
+    margin: 30px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+
+/* Footer */
+.footer{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: silver;
+}
+.footer__container{
+    display: flex;
+    justify-content: center;
+}
