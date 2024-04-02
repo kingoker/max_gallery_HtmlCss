@@ -3,7 +3,7 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'vertical',
   loop: true,
-  mousewheel: true,
+  // mousewheel: true, //Прокрутка при скролле
 
   // If we need pagination
   pagination: {
