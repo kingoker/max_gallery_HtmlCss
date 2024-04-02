@@ -10,65 +10,72 @@
     <!-- Adaptive CSS -->
     <link rel="stylesheet" href="css/adaptive.css">
 
-    <!-- LightGallery CSS-->
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" />
+    <!-- CSS Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-    <!-- lightgallery plugins -->
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" />
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" />
-
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <title>MaxPhoto</title>
 </head>
-<body>
+<body class="body">
     <header class="header">
         <div class="container header__container">
             <div class="header__logo"><a href="#">LOGO</a></div>
-            <nav class="header__menu">
-                <ul class="header__list">
-                    <li class="header__item"><a href="#">Фотограф</a></li>
-                    <li class="header__item"><a href="#">Клиент</a></li>
-                </ul>
-            </nav>
-            <button class="button header__button">Войти</button>
+            <h1>У вас осталось:</h1>
+            <div class="timer" id="timer">
+              <span id="hours">00</span> :
+              <span id="minutes">00</span> :
+              <span id="seconds">00</span>
+            </div>
+            <button class="button header__button">Скачать фотографии</button>
         </div>
     </header>
     
     <section class="main">
-        <div class="container main__container">
-          <div id="lightgallery" class="lightgallery">
-            <a href="img/11.jpg" class="lightgallery__item" data-lg-size="1600-2400">
-                <img alt="img1" class="img-responsive" src="img/11.jpg" />
-            </a>
-            <a href="img/12.jpg" class="lightgallery__item" data-lg-size="1600-2400">
-              <img alt="img1" class="img-responsive" src="img/12.jpg" />
-            </a>
-            <a href="img/13.jpg" class="lightgallery__item" data-lg-size="1600-2400">
-              <img alt="img1" class="img-responsive" src="img/13.jpg" />
-            </a>
-            <a href="img/14.jpg" class="lightgallery__item" data-lg-size="1600-2400">
-              <img alt="img1" class="img-responsive" src="img/14.jpg" />
-            </a>
-            <a href="img/15.jpg" class="lightgallery__item" data-lg-size="1600-2400">
-              <img alt="img1" class="img-responsive" src="img/15.jpg" />
-            </a>
-            <a href="img/16.jpg" class="lightgallery__item" data-lg-size="1600-2400">
-              <img alt="img1" class="img-responsive" src="img/16.jpg" />
-            </a>
-            <a href="img/17.jpg" class="lightgallery__item" data-lg-size="1600-2400">
-              <img alt="img1" class="img-responsive" src="img/17.jpg" />
-            </a>
-            <a href="img/18.jpg" class="lightgallery__item" data-lg-size="1600-2400">
-              <img alt="img1" class="img-responsive" src="img/18.jpg" />
-            </a>
-            <a href="img/19.jpg" class="lightgallery__item" data-lg-size="1600-2400">
-              <img alt="img1" class="img-responsive" src="img/19.jpg" />
-            </a>
-            <a href="img/20.jpg" class="lightgallery__item" data-lg-size="1600-2400">
-              <img alt="img1" class="img-responsive" src="img/20.jpg" />
-            </a>
-          </div>        
+      <div class="main__container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/11.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/12.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/13.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/14.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/15.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/16.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/17.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/18.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/19.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/20.jpg" alt="">
+            </div>
+          </div>
+
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        
+          <!-- If we need navigation buttons -->
+          <div class="button-prev"><i class="bi bi-arrow-up-circle-fill"></i></div>
+          <div class="button-next button-next-down"><i class="bi bi-arrow-up-circle-fill"></i></div>
         </div>
+      </div>
     </section>
 
     <footer class="footer">
@@ -77,11 +84,9 @@
         </div>
     </footer>
 
-    <!-- LightGallery JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.umd.min.js"></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Main JS -->
     <script src="js/script.js"></script>
 </body>

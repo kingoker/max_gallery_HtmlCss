@@ -1,72 +1,103 @@
-/* Normolize */
+/* Normalize */
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     font-family: sans-serif;
-}
-ul, li{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-a{
-    text-decoration: none;
+    box-sizing: border-box;
 }
 
-
-
-
-/* Common Style */
-.button{
-    padding: 10px 30px;
-    border: none;
-    stroke: none;
-    cursor: pointer;
+/* Common Styles */
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .container{
     margin: 0px 100px;
 }
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.button{
+    padding: 10px 30px;
+    cursor: pointer;
 }
 
-
-
-
-/* Main Styles */
 
 /* Header */
 .header{
-    width: 100%;
+    background-color: cornflowerblue;
     padding: 10px 0px;
-    background-color: silver;
+    min-height: 30vh;
 }
 .header__container{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
-.header__list{
-    display: flex;
-    gap: 30px;
+.header__logo{
+    font-size: 14px;
+}
+.timer{
+    font-size: 100px;
+    font-weight: 700;
+    color: azure;
 }
 
-/* Gallery */
-.lightgallery{
-    margin: 30px 0px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 5px;
+
+/* Main Image block */
+.main__container{
+    min-width: 100vh;
+    height: 100%;
+    position: relative;
+}
+.swiper{
+    width: 100%;
+    height: 100vh;
+}
+.swiper-wrapper{
+    min-width: 100vh;
+}
+.swiper-slide{
+    min-width: 100%;
+    background-color: aliceblue;
+}
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.button-prev, .button-next{
+    z-index: 2;
+    position: absolute;
+    opacity: 0.5;
+    font-size: 44px;
+    color: cornflowerblue;
+    cursor: pointer;
+}
+.button-prev{
+    top: 0;
+    left: 50%;
+    transform:translate(-50%, 30%);
+}
+.button-next{
+    bottom: 0;
+    left: 50%;
+    transform:translate(50%, 30%);
+    rotate: 180deg;
 }
 
 
 /* Footer */
 .footer{
-    width: 100%;
+    background-color: cornflowerblue;
     padding: 10px 0px;
-    background-color: silver;
 }
 .footer__container{
     display: flex;
