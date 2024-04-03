@@ -1,3 +1,18 @@
+let scrolled = false;
+
+window.addEventListener('scroll', function() {
+  if (!scrolled) {
+    const targetElement = document.getElementsByClassName('main');
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+    scrolled = true;
+  }
+});
+
+
+
+
+
+
 // Swiper
 const swiper = new Swiper('.swiper', {
   // Optional parameters

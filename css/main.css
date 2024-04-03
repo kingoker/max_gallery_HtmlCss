@@ -32,7 +32,8 @@ img{
 .header{
     background-color: cornflowerblue;
     padding: 10px 0px;
-    min-height: 30vh;
+    height: 30vh;
+    transition: all 1s ease;
 }
 .header__container{
     display: flex;
@@ -52,7 +53,7 @@ img{
 
 /* Main Image block */
 .main__container{
-    min-width: 100vh;
+    width: 100vw;
     height: 100%;
     position: relative;
 }
@@ -75,7 +76,7 @@ img{
     position: absolute;
     opacity: 0.5;
     font-size: 44px;
-    color: cornflowerblue;
+    color: #fff;
     cursor: pointer;
 }
 .button-prev{
