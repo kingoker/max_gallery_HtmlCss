@@ -1,8 +1,8 @@
-let prevScrollPos = window.scrollY;
+let prevScrollPos = window.scrollY || window.pageYOffSet;
   const header = document.getElementById('header');
 
 window.addEventListener('scroll', function() {
-  const currentScrollPos = window.scrollY;
+  const currentScrollPos = window.scrollY || window.pageYOffSet;
   if (prevScrollPos > currentScrollPos) {
     header.classList.remove('menu-hidden');
   } else {
