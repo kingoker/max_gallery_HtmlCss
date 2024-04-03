@@ -21,6 +21,7 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-top: 30px;
 }
 .button{
     padding: 10px 30px;
@@ -42,18 +43,19 @@ img{
 }
 .menu-hidden {
     transform: translateY(-100%);
-  }
+}
 .header__container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    height: 100%;
 }
 .header__logo{
     font-size: 14px;
 }
 .timer{
-    font-size: 100px;
+    font-size: calc(1em + 6vw);
     font-weight: 700;
     color: azure;
 }
