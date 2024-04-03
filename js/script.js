@@ -1,15 +1,15 @@
-let scrolled = false;
+let prevScrollPos = window.scrollY;
+  const header = document.getElementById('header');
 
 window.addEventListener('scroll', function() {
-  if (!scrolled) {
-    const targetElement = document.getElementsByClassName('main');
-    targetElement.scrollIntoView({ behavior: 'smooth' });
-    scrolled = true;
+  const currentScrollPos = window.scrollY;
+  if (prevScrollPos > currentScrollPos) {
+    header.classList.remove('menu-hidden');
+  } else {
+    header.classList.add('menu-hidden');
   }
+  prevScrollPos = currentScrollPos;
 });
-
-
-
 
 
 
