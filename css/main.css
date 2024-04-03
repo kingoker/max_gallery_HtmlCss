@@ -21,7 +21,6 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 30vh;
 }
 .button{
     padding: 10px 30px;
